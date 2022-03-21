@@ -4,7 +4,7 @@ const { equal } = require('assert')
 const { __, test } = require('../support/koans')
 
 // this 'class' pattern defines a class by its constructor
-var Mammal = function(name) {
+const Mammal = function(name) {
     this.name = name;
 }
 // things that don't need to be set in the constructor should be added to the constructor's prototype property.
@@ -14,8 +14,8 @@ Mammal.prototype = {
     }
 }
 
-test("defining a 'class'", function() {
-    var eric  = new Mammal("Eric");
+test("defining a 'class'", () => {
+    const eric  = new Mammal("Eric");
     equal(__, eric.sayHi(), 'what will Eric say?');
 });
 
@@ -24,8 +24,8 @@ Mammal.prototype.favouriteSaying = function() {
     return this.name + "'s favourite saying is " + this.sayHi(); 
 }
 
-test("more functions", function() {
-    var bobby = new Mammal("Bobby");
+test("more functions", () => {
+    const bobby = new Mammal("Bobby");
     equal(__, bobby.favouriteSaying(), "what is Bobby's favourite saying?"); 
 });
 
@@ -41,7 +41,7 @@ test("calling functions added to a prototype after an object was created", funct
 
 // helper function for inheritance. 
 // From https://developer.mozilla.org/en/JavaScript/Guide/Inheritance_Revisited
-function extend(child, supertype){  
+function extend(child, supertype) {  
     child.prototype = supertype.prototype;  
 } 
 
@@ -54,7 +54,7 @@ function Bat(name, wingspan) {
 // configure inheritance
 extend(Bat, Mammal);
 
-test("Inheritance", function() {
+test("Inheritance", () => {
     var lenny = new Bat("Lenny", "1.5m");
     equal(__, lenny.sayHi(), "what does Lenny say?");
     equal(__, lenny.wingspan, "what is Lenny's wingspan?");

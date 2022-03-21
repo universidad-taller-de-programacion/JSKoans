@@ -1,13 +1,5 @@
 
 var __ = "incomplete";
-const test = (message, assertion) => {
-	console.log('\x1b[31m\n')
-	assertion()
-	console.log('\x1b[0m\x1b[42m  %s  \x1b[0m\n', message)
-}
-
-module.exports = { __, test }
-
 
 // ignore this. It simplifies determining array equality
 Array.prototype.equalTo = function(compareTo) {
@@ -22,7 +14,13 @@ Array.prototype.equalTo = function(compareTo) {
 	return true;
 };
 
+const test = (message, assertion) => {
+	console.log('\x1b[31m\n')
+	assertion()
+	console.log('\x1b[0m\x1b[42m  %s  \x1b[0m\n', message)
+}
 
+module.exports = { __, test }
 
 // (function() {
 
