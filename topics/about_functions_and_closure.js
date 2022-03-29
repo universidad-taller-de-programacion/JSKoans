@@ -3,20 +3,20 @@ const { equal } = require('assert')
 const { __, test } = require('../support/koans')
 
 test("defining functions directly", () => {
-    const result = "a";
+    let result = "a";
     function changeResult() {
         // the ability to access a variables defined in the same scope as the function is known as 'closure'
         result = "b";
     };
     changeResult();
-    equal(__, result, 'what is the value of result?');
+    equal("b", result, 'what is the value of result?');
 });
 
 test("assigning functions to variables", () => {
     const triple = (input) => {
         return input * 3;
     };
-    equal(__, triple(4), 'what is triple 4?');
+    equal(12, triple(4), 'what is triple 4?');
 });
 
 test("self invoking functions", () => {
@@ -26,8 +26,8 @@ test("self invoking functions", () => {
     (function(pv) {
         const secretValue = "password";
         equal(__, pv, 'what is the value of pv?');
-        equal("__", typeof(secretValue), "is secretValue available in this context?");
-        equal("__", typeof(publicValue), "is publicValue available in this context?");
+        equal("string", typeof(secretValue), "is secretValue available in this context?");
+        equal("string", typeof(publicValue), "is publicValue available in this context?");
     })(publicValue);
 
     equal("__", typeof(secretValue), "is secretValue available in this context?");
