@@ -1,25 +1,25 @@
 {
-  "main": "topics/about_asserts.js",
-  "name": "javascript-koans",
-  "description": "Update ======",
+  "name": "jskoans",
   "version": "1.0.0",
+  "description": "Prueba de JS Koans en Node",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node ./",
-		"koans": ""
+    "koans": "echo AQUI EJECUTO MIS KOANS"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pipetus/JavaScript-Koans.git"
+    "url": "git+https://github.com/silibestref/JSKoans.git"
   },
   "keywords": [
-    "javascript",
-    "koans"
+    "koans",
+    "estudio",
+    "javascript"
   ],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pipetus/JavaScript-Koans/issues"
+    "url": "https://github.com/silibestref/JSKoans/issues"
   },
-  "homepage": "https://github.com/pipetus/JavaScript-Koans#readme"
+  "homepage": "https://github.com/silibestref/JSKoans#readme"
 }
