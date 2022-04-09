@@ -62,14 +62,14 @@ test("hasOwnProperty", () => {
 test("constructor property", () => {
     const a = new A();
     const b = new B();
-    equal("object", typeof(a.constructor), "what is the type of a's constructor?");
-    equal("aprop", a.constructor.name, "what is the name of a's constructor?");
-    equal("bprop", b.constructor.name, "what is the name of b's constructor?");
+    equal("function", typeof(a.constructor), "what is the type of a's constructor?");
+    equal("A", a.constructor.name, "what is the name of a's constructor?");
+    equal("A", b.constructor.name, "what is the name of b's constructor?");
 });
 
 test("eval", () => {
     // eval executes a string
     let result = "";
     eval("result = 'apple' + ' ' + 'pie'");
-    equal(__, result, 'what is the value of result?');
+    equal('apple pie', result, 'what is the value of result?');
 });
