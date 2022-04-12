@@ -21,7 +21,7 @@ test("character Type", () => {
 
 test("escape character", () => {
     const stringWithAnEscapedCharacter  = "\u0041pple";
-    equal(__, stringWithAnEscapedCharacter, 'what  is the value of stringWithAnEscapedCharacter?');
+    equal("Apple", stringWithAnEscapedCharacter, 'what  is the value of stringWithAnEscapedCharacter?');
 });
 
 test("string.length", () => {
@@ -31,5 +31,5 @@ test("string.length", () => {
 
 test("slice", () => {
     const fruit = "apple pie";
-    equal("apple ", fruit.slice(0,5), 'what is the value of fruit.slice(0,5)?');
+    equal("apple", fruit.slice(0,5), 'what is the value of fruit.slice(0,5)?');
 });
