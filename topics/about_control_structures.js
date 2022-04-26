@@ -7,7 +7,7 @@ test("if", () => {
 	if (2 > 0) {
 		isPositive = true;
 	}
-	equal(__, isPositive,  'what is the value of isPositive?');
+	equal(true, isPositive,  'what is the value of isPositive?');
 });
 
 test("for", () => {
@@ -15,7 +15,7 @@ test("for", () => {
 	for (let i = 1; i <= 3; i++) {
 		counter = counter + i;
 	}
-	equal(__, counter, 'what is the value of counter?');
+	equal(16, counter, 'what is the value of counter?');
 });
 
 test("for in", () => {
@@ -24,21 +24,23 @@ test("for in", () => {
 		name: "Amory Blaine",
 		age: 102
 	};
-	let result = "";
+	let result = "name: ";
 
 	// for in enumerates the property names of an object
-	for (let property_name in person) {
-  		result = result + property_name;
+	for (let atributo in person) {
+		if(atributo=="name"){
+			result = result + person[atributo];
+		}  		
 	}
-	equal(__, result, 'what is the value of result?');
+	equal("name: Amory Blaine", result, 'what is the value of result?');
 });
 
 test("ternary operator", () => {
 	let fruit = true ? "apple" : "orange";
-	equal(__, fruit, 'what is the value of fruit?');
+	equal("apple", fruit, 'what is the value of fruit?');
 
 	fruit = false ? "apple" : "orange";
-	equal(__, fruit, 'now what is the value of fruit?');
+	equal("orange", fruit, 'now what is the value of fruit?');
 });
 
 test("switch", () => {
@@ -51,7 +53,7 @@ test("switch", () => {
 			result = 2;
 			break;
 	}
-	equal(__, result, 'what is the value of result?');
+	equal(2, result, 'what is the value of result?');
 });
 
 test("switch default case", () => {
@@ -67,10 +69,15 @@ test("switch default case", () => {
             result = "Merry";
             break;
     }
-    equal(__, result, 'what is the value of result?');
+    equal("Merry", result, 'what is the value of result?');
 });
 
 test("null coalescing", () => {
     let result = null || "a value";
-    equal(__, result, 'what is the value of result?');
+    equal("a value", result, 'what is the value of result?');
 });
+/*
+is a logical operator that returns its right-hand side operand 
+when its left-hand side operand is "falsy"
+and otherwise returns its left-hand side operand.
+*/
