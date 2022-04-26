@@ -20,7 +20,7 @@ const test = (message, assertion) => {
 	console.log('\x1b[0m\x1b[42m  %s  \x1b[0m\n', message)
 }
 
-module.exports = { __, test }
+module.exports = { __ , test }
 
 // (function() {
 
