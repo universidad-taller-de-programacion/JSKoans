@@ -2,6 +2,10 @@
 const { equal } = require('assert')
 const { __, test } = require('../support/koans')
 
+const chalk = require('chalk');
+console.log(chalk.cyan(chalk.cyan.underline.bold('About this')));
+
+
 test("'this' inside a method", () => {
 	const person = {
 		name: 'bob',

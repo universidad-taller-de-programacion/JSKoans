@@ -1,6 +1,11 @@
 // module("About Arrays (topics/about_arrays.js)");
 const { equal, deepEqual } = require('assert')
+const chalk = require('chalk');
 const { __, test } = require('../support/koans')
+
+
+
+console.log(chalk.cyan(chalk.cyan.underline.bold('About Arrays')));
 
 test("array literal syntax and indexing", () => {
     const favouriteThings = ["cellar door", 42, true]; // note that array elements do not have to be of the same type

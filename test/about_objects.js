@@ -2,6 +2,9 @@
 const { equal } = require('assert')
 const { __, test } = require('../support/koans')
 
+const chalk = require('chalk');
+console.log(chalk.cyan(chalk.cyan.underline.bold('About Objects')));
+
 test("object type", () => {
     const empty_object = {};
     equal('object', typeof(empty_object), 'what is the type of an object?');

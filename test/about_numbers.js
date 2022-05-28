@@ -2,6 +2,9 @@
 const { equal } = require('assert')
 const { __, test } = require('../support/koans')
 
+const chalk = require('chalk');
+console.log(chalk.cyan(chalk.cyan.underline.bold('About Numbers')));
+
 test("types", () => {
     const typeOfIntegers = typeof(6);
     const typeOfFloats = typeof(3.14159);

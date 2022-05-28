@@ -6,6 +6,10 @@ const koans = require('../support/koans')
 // const test = koans.test
 const { __ } = koans
 const { test } = koans
+const chalk = require('chalk');
+
+console.log(chalk.cyan(chalk.cyan.underline.bold('About Asserts')));
+
 
 test("ok", () => {
     ok(true === true, 'what will satisfy the ok assertion?');

@@ -2,6 +2,9 @@
 const { equal, ok } = require('assert')
 const { __, test } = require('../support/koans')
 
+const chalk = require('chalk');
+console.log(chalk.cyan(chalk.cyan.underline.bold('About Regular Expressions')));
+
 test("exec", () => {
     const numberFinder = /(\d).*(\d)/;
     const results = numberFinder.exec("what if 6 turned out to be 9?");

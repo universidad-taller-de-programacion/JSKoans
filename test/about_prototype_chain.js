@@ -28,6 +28,11 @@ child.b = 2;
  * ---------------------- ---- ---- ----
  * */
 
+const chalk = require('chalk');
+console.log(chalk.cyan(chalk.cyan.underline.bold('About Prototype Chai')));
+
+
+
 test("Is there an 'a' and 'b' own property on child?", () => {
   equal(true, child.hasOwnProperty('a'), 'child.hasOwnProperty(\'a\')?');
   equal(true, child.hasOwnProperty('b'), 'child.hasOwnProperty(\'b\')?');

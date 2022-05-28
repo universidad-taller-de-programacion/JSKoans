@@ -1,6 +1,10 @@
 // module("About Functions And Closure (topics/about_functions_and_closure.js)");
 const { equal } = require('assert')
 const { __, test } = require('../support/koans')
+
+const chalk = require('chalk');
+console.log(chalk.cyan(chalk.cyan.underline.bold('About Functions And Closure')));
+
  // no se puede asigar un valor a una consante
 // test("defining functions directly", () => {
 //     const result = "a";

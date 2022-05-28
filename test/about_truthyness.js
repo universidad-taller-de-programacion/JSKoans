@@ -2,6 +2,9 @@
 const { equal, deepEqual } = require('assert')
 const { __, test } = require('../support/koans')
 
+const chalk = require('chalk');
+console.log(chalk.cyan(chalk.cyan.underline.bold('About Truthyness')));
+
 test("truthyness of positive numbers", () => {
     const oneIsTruthy = 1 ? true : false;
     equal(true, oneIsTruthy, 'is one truthy?');

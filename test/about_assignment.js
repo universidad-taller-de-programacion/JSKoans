@@ -1,6 +1,8 @@
 // module("About Assignment (topics/about_assignment.js)");
 const { equal } = require('assert')
 const { __, test } = require('../support/koans')
+const chalk = require('chalk');
+console.log(chalk.cyan(chalk.cyan.underline.bold('About Assignment')));
 
 test("local variables", () => {
     const temp = 1;

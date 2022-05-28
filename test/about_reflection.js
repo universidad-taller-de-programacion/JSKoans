@@ -2,6 +2,9 @@
 const { equal, deepEqual, ok } = require('assert')
 const { __, test } = require('../support/koans')
 
+const chalk = require('chalk');
+console.log(chalk.cyan(chalk.cyan.underline.bold('About Reflection')));
+
 function A() {
     this.aprop = "A";
 };
