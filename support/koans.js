@@ -1,6 +1,9 @@
 
 var __ = "incomplete";
 
+const chalk = require('chalk');
+//console.log(chalk.cyan(chalk.cyan.underline.bold('About Arrays')));
+
 // ignore this. It simplifies determining array equality
 Array.prototype.equalTo = function(compareTo) {
 	if (this.length !== compareTo.length) {
@@ -15,9 +18,9 @@ Array.prototype.equalTo = function(compareTo) {
 };
 
 const test = (message, assertion) => {
-	console.log('\x1b[31m\n')
+	console.log(chalk.green('-'));
 	assertion()
-	console.log('\x1b[0m\x1b[42m  %s  \x1b[0m\n', message)
+	console.log(chalk.green(message));
 }
 
 module.exports = { __, test }

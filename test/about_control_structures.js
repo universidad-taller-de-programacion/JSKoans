@@ -1,13 +1,16 @@
 // module("About Control Structures (topics/about_control_structures.js)");
 const { equal } = require('assert')
 const { __, test } = require('../support/koans')
+const chalk = require('chalk');
+console.log(chalk.cyan(chalk.cyan.underline.bold('About Control Structures')));
+
 
 test("if", () => {
 	let isPositive = false;
 	if (2 > 0) {
 		isPositive = true;
 	}
-	equal(__, isPositive,  'what is the value of isPositive?');
+	equal(true, isPositive,  'what is the value of isPositive?');
 });
 
 test("for", () => {
@@ -15,7 +18,7 @@ test("for", () => {
 	for (let i = 1; i <= 3; i++) {
 		counter = counter + i;
 	}
-	equal(__, counter, 'what is the value of counter?');
+	equal(16, counter, 'what is the value of counter?');
 });
 
 test("for in", () => {
@@ -30,15 +33,15 @@ test("for in", () => {
 	for (let property_name in person) {
   		result = result + property_name;
 	}
-	equal(__, result, 'what is the value of result?');
+	equal("nameage", result, 'what is the value of result?');
 });
 
 test("ternary operator", () => {
 	let fruit = true ? "apple" : "orange";
-	equal(__, fruit, 'what is the value of fruit?');
+	equal("apple", fruit, 'what is the value of fruit?');
 
 	fruit = false ? "apple" : "orange";
-	equal(__, fruit, 'now what is the value of fruit?');
+	equal("orange", fruit, 'now what is the value of fruit?');
 });
 
 test("switch", () => {
@@ -51,7 +54,7 @@ test("switch", () => {
 			result = 2;
 			break;
 	}
-	equal(__, result, 'what is the value of result?');
+	equal(2, result, 'what is the value of result?');
 });
 
 test("switch default case", () => {
@@ -67,10 +70,10 @@ test("switch default case", () => {
             result = "Merry";
             break;
     }
-    equal(__, result, 'what is the value of result?');
+    equal("Merry", result, 'what is the value of result?');
 });
 
 test("null coalescing", () => {
     let result = null || "a value";
-    equal(__, result, 'what is the value of result?');
+    equal("a value", result, 'what is the value of result?');
 });
