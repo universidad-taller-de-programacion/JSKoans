@@ -1,5 +1,29 @@
 
 var __ = "incomplete";
+// const chalk = require('chalk');
+// import chalk from 'chalk';
+//ignore this:
+/*
+Error [ERR_REQUIRE_ESM]: require() of ES Module C:\WorkSpace\tp2\JSKoans\node_modules\chalk\source\index.js from C:\WorkSpace\tp2\JSKoans\support\koans.js not supported.
+Instead change the require of index.js in C:\WorkSpace\tp2\JSKoans\support\koans.js to a dynamic import() which is available in all CommonJS modules.
+    at Object.<anonymous> (C:\WorkSpace\tp2\JSKoans\support\koans.js:3:15)
+    at Object.<anonymous> (C:\WorkSpace\tp2\JSKoans\topics\about_truthyness.js:3:22) {
+  code: ←[32m'ERR_REQUIRE_ESM'←[39m
+}
+*/
+/*
+SyntaxError: Cannot use import statement outside a module
+←[90m    at Object.compileFunction (node:vm:352:18)←[39m
+←[90m    at wrapSafe (node:internal/modules/cjs/loader:1032:15)←[39m
+←[90m    at Module._compile (node:internal/modules/cjs/loader:1067:27)←[39m
+←[90m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1157:10)←[39m
+←[90m    at Module.load (node:internal/modules/cjs/loader:981:32)←[39m
+←[90m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)←[39m
+←[90m    at Module.require (node:internal/modules/cjs/loader:1005:19)←[39m
+←[90m    at require (node:internal/modules/cjs/helpers:102:18)←[39m
+    at Object.<anonymous> (C:\WorkSpace\tp2\JSKoans\topics\about_truthyness.js:3:22)
+←[90m    at Module._compile (node:internal/modules/cjs/loader:1103:14)←[39m
+*/
 
 // ignore this. It simplifies determining array equality
 Array.prototype.equalTo = function(compareTo) {
@@ -16,8 +40,10 @@ Array.prototype.equalTo = function(compareTo) {
 
 const test = (message, assertion) => {
 	console.log('\x1b[31m\n')
+	// console.log(chalk.green('-'));
 	assertion()
 	console.log('\x1b[0m\x1b[42m  %s  \x1b[0m\n', message)
+	// console.log(chalk.green(message));
 }
 
 module.exports = { __, test }
